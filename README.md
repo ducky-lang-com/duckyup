@@ -2,7 +2,7 @@
 
 Install and update scripts for **[Ducky](https://github.com/ducky-lang-com/ducky-lang)**
 — the small, statically typed language that compiles to native x86-64
-machine code.
+machine code, with a `tensor` type whose shape lives in the type.
 
 `install.sh` and `update.sh` in this repository are mirrors of the scripts
 at the root of the canonical
@@ -45,6 +45,26 @@ curl -fsSL https://raw.githubusercontent.com/ducky-lang-com/ducky-lang/main/upda
 Prebuilt, statically linked binaries ship with every release of the main
 repository: <https://github.com/ducky-lang-com/ducky-lang/releases>
 (`duckyc-linux-x86_64` since v0.7.0).
+
+The current release is **v0.8.0**, which adds the `tensor` type — shapes in
+the type, checked at compile time — together with `matmul` / `dot`, the
+activations, the reductions and the `mse` / `cross_entropy` losses. Running
+`ducky-update` (or the `update.sh` one-liner) moves an existing installation
+onto it.
+
+## Documentation
+
+Everything is in the main repository:
+
+* [USAGE.md](https://github.com/ducky-lang-com/ducky-lang/blob/main/USAGE.md)
+  — the day-to-day usage guide: install, compile, a tour of the language with
+  runnable snippets, and a walkthrough of the tensor / neural-net builtins.
+* [SPEC.md](https://github.com/ducky-lang-com/ducky-lang/blob/main/SPEC.md)
+  — the formal language specification.
+* [README.md](https://github.com/ducky-lang-com/ducky-lang/blob/main/README.md)
+  — features, building and project layout.
+* [ROADMAP.md](https://github.com/ducky-lang-com/ducky-lang/blob/main/ROADMAP.md)
+  — what has been delivered and what comes next.
 
 Documentation, source and the issue tracker all live in
 [ducky-lang](https://github.com/ducky-lang-com/ducky-lang).
